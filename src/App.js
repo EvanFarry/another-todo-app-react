@@ -2,24 +2,22 @@ import React, { Component } from 'react';
 import './App.css';
 import uuid from 'uuid'
 
-class App extends Component {
+//my components
+import InputForm from './components/InputForm'
+import List from './components/List'
 
+
+class App extends Component {
   constructor(props){
     super(props)
     this.handleChagne = this.handleChagne.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleDelete = this.handleDelete.bind(this)
-    this.state = {
-      newItem: '',
-      list:
-        []
-    }
+    this.state = { newItem: '', list: [] }
   }
 
   handleChagne(data){
-    this.setState({
-      newItem: data
-    })
+    this.setState({newItem: data})
   }
 
   handleSubmit(data){
@@ -43,7 +41,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>To Do React</h1>
+        <h1>Your To Do List</h1>
         <List
           list={this.state.list}
           handleDelete={this.handleDelete}
@@ -58,33 +56,7 @@ class App extends Component {
     );
   }
 }
-
-class InputForm extends React.Component {
-
-  handleChange(e){
-    this.props.handleChagne(e.target.value)
-  }
-
-  handleSubmit(e){
-    e.preventDefault()
-    let item = this.refs.new_item.value
-    this.props.handleSubmit(item)
-  }
-
-  render(){
-    return(
-      <form onSubmit={this.handleSubmit.bind(this)}>
-        <input
-          type='text'
-          ref="new_item"
-          value={this.props.newItem}
-          onChange={this.handleChange.bind(this)}
-        />
-      </form>
-    )
-  }
-}
-
+/*
 class List extends React.Component {
 
   handleDelete(id){
@@ -102,5 +74,5 @@ class List extends React.Component {
     return( <ul>{listItem}</ul> )
   }
 }
-
+*/
 export default App;

@@ -1,0 +1,14 @@
+ul{ padding: 0px; }
+
+.list-item {
+  display: grid;
+  grid-template-columns: 25px 1fr 20px;
+}
+
+.item-body {
+  text-align: left;
+}
+
+.item-delete:hover {
+  cursor: pointer;
+}
