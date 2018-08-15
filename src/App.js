@@ -56,23 +56,4 @@ class App extends Component {
     );
   }
 }
-/*
-class List extends React.Component {
-
-  handleDelete(id){
-    this.props.handleDelete(id)
-  }
-
-  render(){
-    let list = this.props.list
-    let listItem = list.map((item, index) =>
-      <li key={item.id} ref={item.id}>
-        {item.body}
-        <span onClick={this.handleDelete.bind(this, this.props.list[index].id)}> Delete </span>
-      </li>
-    )
-    return( <ul>{listItem}</ul> )
-  }
-}
-*/
 export default App;
