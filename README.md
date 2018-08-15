@@ -1,1 +1,1 @@
-The Classic todo app -- but this time in React!
+The Classic todo app  :zzz:  -- but this time in React!
