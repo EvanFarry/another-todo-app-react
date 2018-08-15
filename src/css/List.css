@@ -1,4 +1,7 @@
-ul{ padding: 0px; }
+*, input{
+  padding: 0px;
+  margin: 0px;
+}
 
 .list-item {
   display: grid;

@@ -9,7 +9,7 @@ class List extends React.Component {
     let listItem = list.map((item, index) =>
       <li key={item.id} ref={item.id} className="list-item">
         <input type='checkbox' />
-        <span className="item-body">{item.body}</span>
+        <p className="item-body">{item.body}</p>
         <span
           className="item-delete"
           onClick={this.handleDelete.bind(this, this.props.list[index].id)}>X
